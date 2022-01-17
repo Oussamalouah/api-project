@@ -7,7 +7,7 @@ var point = document.querySelector('.poin')
 
 button.addEventListener('click',function(){
 
-    fetch('http://api.weatherapi.com/v1/current.json?key=87336ef2f881457181785755221401&q='+inputValue.value+'&aqi=no')
+    fetch('https://api.weatherapi.com/v1/current.json?key=87336ef2f881457181785755221401&q='+inputValue.value+'&aqi=no')
     .then(response => response.json())
     .then(data => {
         var cityValue= data.location.name;
@@ -23,10 +23,7 @@ button.addEventListener('click',function(){
     })
     
     .catch  (error => alert("wrong city name !"))
-    if (inputValue='null'){
-        alert('city name is required')
-
-    }
+   
     
     
     
